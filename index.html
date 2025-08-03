@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Big Goblins Clan</title>
+    <!-- Google font for retro arcade style -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font‑Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-+CiB6BMmJWLMXfA83RXy33QJK2gUd5H1vR91GgsnI+qX2VkJth2VhhdR4ws0OudHP7yWI+bDqZVKwZ67t9JkPg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <!-- Using a goblin icon as the site emblem -->
+          <i class="fas fa-hat-wizard"></i>
+          <span>Big Goblins</span>
+        </a>
+        <nav>
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+          </label>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li class="dropdown">
+              <a href="hiscores.html">Hiscores <i class="fas fa-caret-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#overall">Overall</a></li>
+                <li><a href="#collection">Collection Logs</a></li>
+                <li><a href="#competitions">Competitions</a></li>
+                <li><a href="#pets">Pets</a></li>
+                <li><a href="#achievements">Combat Achievements</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h1 class="hero-title">Big Goblins</h1>
+        <p class="hero-subtitle">OSRS Social Clan</p>
+        <p class="hero-requirement">No level requirement – join the goblin family!</p>
+        <a href="#join" class="btn primary">Join Now</a>
+      </div>
+    </section>
+
+    <!-- Statistics section -->
+    <section class="stats-section">
+      <div class="container">
+        <h2 class="section-title">Clan Stats</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <i class="fas fa-users"></i>
+            <h3>128</h3>
+            <p>Total Members</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>1750</h3>
+            <p>Avg. Total Level</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-star"></i>
+            <h3>35%</h3>
+            <p>Maxed Members</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-fire"></i>
+            <h3>42</h3>
+            <p>Members with Infernal Cape</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent logs & achievements -->
+    <section class="two-columns">
+      <div class="container">
+        <div class="column">
+          <h2 class="section-title">Recent Collection Logs</h2>
+          <ul class="table-list">
+            <li class="table-row">
+              <span class="player">GoblinGuy42</span>
+              <span class="item"><i class="fas fa-hat-wizard"></i> Goblin mask</span>
+              <span class="timestamp">2025-08-03</span>
+            </li>
+            <li class="table-row">
+              <span class="player">GreenGob</span>
+              <span class="item"><i class="fas fa-drumstick-bite"></i> Spicy stew</span>
+              <span class="timestamp">2025-08-02</span>
+            </li>
+            <li class="table-row">
+              <span class="player">Sneaky</span>
+              <span class="item"><i class="fas fa-apple-alt"></i> Golden apple</span>
+              <span class="timestamp">2025-08-02</span>
+            </li>
+            <li class="table-row">
+              <span class="player">Rockeater</span>
+              <span class="item"><i class="fas fa-gem"></i> Ancient gem</span>
+              <span class="timestamp">2025-08-01</span>
+            </li>
+          </ul>
+        </div>
+        <div class="column">
+          <h2 class="section-title">Recent Achievements</h2>
+          <ul class="table-list">
+            <li class="table-row">
+              <span class="player">IronGoblin</span>
+              <span class="achievement">Reached 2,000 Total Level</span>
+              <span class="timestamp">2025-08-02</span>
+            </li>
+            <li class="table-row">
+              <span class="player">BigNoseBob</span>
+              <span class="achievement">Obtained Infernal Cape</span>
+              <span class="timestamp">2025-08-01</span>
+            </li>
+            <li class="table-row">
+              <span class="player">FungusFarmer</span>
+              <span class="achievement">Completed Goblin Diplomat quest</span>
+              <span class="timestamp">2025-08-01</span>
+            </li>
+            <li class="table-row">
+              <span class="player">Mushroom</span>
+              <span class="achievement">Reached 100M XP</span>
+              <span class="timestamp">2025-07-30</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top earners and events -->
+    <section class="two-columns">
+      <div class="container">
+        <div class="column">
+          <h2 class="section-title">Monthly Top Earners</h2>
+          <div class="top-earners">
+            <div class="earner">
+              <i class="fas fa-crown"></i>
+              <span class="name">Boss Slayer</span>
+              <span class="points">+150k EHP</span>
+            </div>
+            <div class="earner">
+              <i class="fas fa-crown"></i>
+              <span class="name">Loot Queen</span>
+              <span class="points">+130k EHB</span>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <h2 class="section-title">Upcoming Events</h2>
+          <div class="event-card">
+            <h3 class="event-title">Goblin Raid Boss</h3>
+            <p class="event-meta"><i class="fas fa-calendar"></i> 08/15/2025 &nbsp; <i class="fas fa-clock"></i> 19:00 UTC</p>
+            <p class="event-description">Gather your gear and join us as we take down the legendary goblin king!</p>
+          </div>
+          <div class="event-card">
+            <h3 class="event-title">Skill of the Week</h3>
+            <p class="event-meta"><i class="fas fa-calendar"></i> 08/10/2025 &nbsp; <i class="fas fa-clock"></i> All week</p>
+            <p class="event-description">Compete to see who can train the most Crafting XP in a week.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rank checker and newsletter -->
+    <section class="two-columns">
+      <div class="container">
+        <div class="column">
+          <h2 class="section-title">Rank Checker</h2>
+          <form id="rank-form" class="rank-form">
+            <label for="rsn">Enter your RSN:</label>
+            <input type="text" id="rsn" name="rsn" placeholder="Your RuneScape Name" required />
+            <button type="submit" class="btn secondary">Check Rank</button>
+          </form>
+          <p id="rank-result" class="rank-result"></p>
+        </div>
+        <div class="column">
+          <h2 class="section-title">Latest Newsletter</h2>
+          <div class="newsletter-preview">
+            <!-- Placeholder newsletter image created with CSS; user can replace with actual art later -->
+            <div class="newsletter-image">
+              <i class="fas fa-newspaper"></i>
+            </div>
+            <div class="newsletter-content">
+              <h3>Issue #5 – August</h3>
+              <p>Catch up on the latest clan news, events recap, and community highlights.</p>
+              <a href="newsletter.html#issue-5" class="btn tertiary">Read Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-section">
+          <h4>Big Goblins</h4>
+          <p>OSRS social clan based in the heart of Gielinor. Join our goblin family and share adventures!</p>
+        </div>
+        <div class="footer-section">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="hiscores.html">Hiscores</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul class="social-links">
+            <li><a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Big Goblins Clan. All rights reserved.</p>
+        <p class="credit">Designed with ♥ by the Big Goblins community.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiscores | Big Goblins Clan</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-+CiB6BMmJWLMXfA83RXy33QJK2gUd5H1vR91GgsnI+qX2VkJth2VhhdR4ws0OudHP7yWI+bDqZVKwZ67t9JkPg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-hat-wizard"></i>
+          <span>Big Goblins</span>
+        </a>
+        <nav>
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+          </label>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li class="dropdown">
+              <a href="hiscores.html">Hiscores <i class="fas fa-caret-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#overall">Overall</a></li>
+                <li><a href="#collection">Collection Logs</a></li>
+                <li><a href="#competitions">Competitions</a></li>
+                <li><a href="#pets">Pets</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="two-columns">
+      <div class="container">
+        <section id="overall" class="column">
+          <h2 class="section-title">Overall Hiscores</h2>
+          <ul class="table-list">
+            <li class="table-row">
+              <span class="player">IronGoblin</span>
+              <span class="achievement">3,200 Total Level</span>
+              <span class="timestamp">Rank #1</span>
+            </li>
+            <li class="table-row">
+              <span class="player">Boss Slayer</span>
+              <span class="achievement">3,150 Total Level</span>
+              <span class="timestamp">Rank #2</span>
+            </li>
+            <li class="table-row">
+              <span class="player">Loot Queen</span>
+              <span class="achievement">3,100 Total Level</span>
+              <span class="timestamp">Rank #3</span>
+            </li>
+            <li class="table-row">
+              <span class="player">Mushroom</span>
+              <span class="achievement">3,050 Total Level</span>
+              <span class="timestamp">Rank #4</span>
+            </li>
+          </ul>
+        </section>
+        <section id="collection" class="column">
+          <h2 class="section-title">Collection Logs</h2>
+          <ul class="table-list">
+            <li class="table-row">
+              <span class="player">GreenGob</span>
+              <span class="achievement">235 unique items</span>
+              <span class="timestamp">Rank #1</span>
+            </li>
+            <li class="table-row">
+              <span class="player">Rockeater</span>
+              <span class="achievement">210 unique items</span>
+              <span class="timestamp">Rank #2</span>
+            </li>
+            <li class="table-row">
+              <span class="player">Sneaky</span>
+              <span class="achievement">205 unique items</span>
+              <span class="timestamp">Rank #3</span>
+            </li>
+          </ul>
+        </section>
+        <section id="competitions" class="column">
+          <h2 class="section-title">Competitions</h2>
+          <ul class="table-list">
+            <li class="table-row">
+              <span class="player">Boss Slayer</span>
+              <span class="achievement">EHP Marathon Champion</span>
+              <span class="timestamp">July 2025</span>
+            </li>
+            <li class="table-row">
+              <span class="player">FungusFarmer</span>
+              <span class="achievement">Fishing Frenzy Winner</span>
+              <span class="timestamp">June 2025</span>
+            </li>
+            <li class="table-row">
+              <span class="player">IronGoblin</span>
+              <span class="achievement">Crafting Week Leader</span>
+              <span class="timestamp">May 2025</span>
+            </li>
+          </ul>
+        </section>
+        <section id="pets" class="column">
+          <h2 class="section-title">Pets</h2>
+          <ul class="table-list">
+            <li class="table-row">
+              <span class="player">IronGoblin</span>
+              <span class="achievement">5 Pets – including Zuk & Skotos</span>
+              <span class="timestamp">Rank #1</span>
+            </li>
+            <li class="table-row">
+              <span class="player">Loot Queen</span>
+              <span class="achievement">4 Pets – including Skilling & Boss pets</span>
+              <span class="timestamp">Rank #2</span>
+            </li>
+            <li class="table-row">
+              <span class="player">GreenGob</span>
+              <span class="achievement">3 Pets</span>
+              <span class="timestamp">Rank #3</span>
+            </li>
+          </ul>
+        </section>
+        <section id="achievements" class="column">
+          <h2 class="section-title">Combat Achievements</h2>
+          <ul class="table-list">
+            <li class="table-row">
+              <span class="player">Boss Slayer</span>
+              <span class="achievement">Grandmaster Tier completed</span>
+              <span class="timestamp">August 2025</span>
+            </li>
+            <li class="table-row">
+              <span class="player">IronGoblin</span>
+              <span class="achievement">Master Tier completed</span>
+              <span class="timestamp">July 2025</span>
+            </li>
+            <li class="table-row">
+              <span class="player">Mushroom</span>
+              <span class="achievement">Elite Tier completed</span>
+              <span class="timestamp">June 2025</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-section">
+          <h4>Big Goblins</h4>
+          <p>OSRS social clan based in the heart of Gielinor. Join our goblin family and share adventures!</p>
+        </div>
+        <div class="footer-section">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="hiscores.html">Hiscores</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul class="social-links">
+            <li><a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Big Goblins Clan. All rights reserved.</p>
+        <p class="credit">Designed with ♥ by the Big Goblins community.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

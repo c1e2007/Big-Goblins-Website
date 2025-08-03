@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Big Goblins Clan</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-+CiB6BMmJWLMXfA83RXy33QJK2gUd5H1vR91GgsnI+qX2VkJth2VhhdR4ws0OudHP7yWI+bDqZVKwZ67t9JkPg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-hat-wizard"></i>
+          <span>Big Goblins</span>
+        </a>
+        <nav>
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+          </label>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li class="dropdown">
+              <a href="hiscores.html">Hiscores <i class="fas fa-caret-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="hiscores.html#overall">Overall</a></li>
+                <li><a href="hiscores.html#collection">Collection Logs</a></li>
+                <li><a href="hiscores.html#competitions">Competitions</a></li>
+                <li><a href="hiscores.html#pets">Pets</a></li>
+                <li><a href="hiscores.html#achievements">Achievements</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="two-columns">
+      <div class="container">
+        <div class="column">
+          <h1 class="section-title">About Big Goblins</h1>
+          <p>
+            Founded in 2025, Big Goblins is a community of adventurers and
+            mischief‑makers who call Gielinor home. Our clan welcomes players of
+            all levels and backgrounds — whether you're here to slay bosses,
+            collect loot, or simply hang out with friends while fishing, you'll
+            find a place among the goblin horde.
+          </p>
+          <p>
+            We take pride in our relaxed atmosphere and focus on social
+            interaction. There are no strict requirements to join; we believe
+            the best experiences come from camaraderie and shared stories.
+          </p>
+          <p>
+            Our members host weekly events ranging from PvM raids and skill
+            competitions to fun mini‑games and clan‑only treasure hunts. With
+            active voice chat and a helpful Discord server, it's easy to make
+            friends and find groups for your favorite activities.
+          </p>
+        </div>
+        <div class="column">
+          <h2 class="section-title">What We Offer</h2>
+          <ul class="table-list">
+            <li class="table-row">
+              <span class="item"><i class="fas fa-users"></i> Friendly community</span>
+              <span class="timestamp">Always active</span>
+            </li>
+            <li class="table-row">
+              <span class="item"><i class="fas fa-dungeon"></i> Bossing & Raids</span>
+              <span class="timestamp">Weekly</span>
+            </li>
+            <li class="table-row">
+              <span class="item"><i class="fas fa-scroll"></i> Skill of the Week</span>
+              <span class="timestamp">Monthly</span>
+            </li>
+            <li class="table-row">
+              <span class="item"><i class="fas fa-chess-queen"></i> Competitions</span>
+              <span class="timestamp">Seasonal</span>
+            </li>
+            <li class="table-row">
+              <span class="item"><i class="fas fa-music"></i> Chill nights</span>
+              <span class="timestamp">Random</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-section">
+          <h4>Big Goblins</h4>
+          <p>OSRS social clan based in the heart of Gielinor. Join our goblin family and share adventures!</p>
+        </div>
+        <div class="footer-section">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="hiscores.html">Hiscores</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul class="social-links">
+            <li><a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Big Goblins Clan. All rights reserved.</p>
+        <p class="credit">Designed with ♥ by the Big Goblins community.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

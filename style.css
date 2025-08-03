@@ -1,0 +1,544 @@
+/*
+  Big Goblins Clan – main stylesheet
+  This stylesheet defines the visual appearance for the Big Goblins website.
+  The palette features burnt greens and browns with a retro 1‑up flare.
+*/
+
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.5;
+}
+
+/* Colour variables for easy theming */
+:root {
+  --bg-color: #0d0d0d;
+  --card-color: #1a1a1a;
+  --primary-color: #556b2f; /* burnt green */
+  --secondary-color: #8b4513; /* brown */
+  --accent-color: #9acd32; /* 1‑up lime */
+  --text-color: #f0e9c8; /* parchment */
+  --muted-color: #888;
+  --border-radius: 8px;
+}
+
+/* Container layout */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid var(--primary-color);
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+.logo i {
+  margin-right: 0.5rem;
+}
+nav {
+  position: relative;
+}
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.nav-menu a {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.nav-menu a:hover,
+.nav-menu a:focus {
+  color: var(--accent-color);
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--card-color);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  list-style: none;
+  padding: 0.5rem 0;
+  display: none;
+  min-width: 160px;
+  z-index: 50;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu li {
+  padding: 0.25rem 1rem;
+}
+.dropdown-menu li a {
+  color: var(--text-color);
+  display: block;
+}
+.dropdown-menu li a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive nav (hamburger) */
+.nav-toggle {
+  display: none;
+}
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background-color: var(--text-color);
+  height: 2px;
+  width: 24px;
+  border-radius: 1px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+.nav-toggle-label span::before {
+  top: -7px;
+}
+.nav-toggle-label span::after {
+  top: 7px;
+}
+/* Toggle animation */
+.nav-toggle:checked + .nav-toggle-label span {
+  background-color: transparent;
+}
+.nav-toggle:checked + .nav-toggle-label span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.nav-toggle:checked + .nav-toggle-label span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.nav-toggle:checked ~ .nav-menu {
+  display: block;
+}
+/* Small screens */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--card-color);
+    border: 1px solid var(--primary-color);
+    width: 200px;
+    padding: 0.5rem 0;
+    display: none;
+  }
+  .nav-toggle-label {
+    display: flex;
+  }
+  .nav-menu li {
+    padding: 0.5rem 1rem;
+  }
+  .dropdown-menu {
+    position: static;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+  .dropdown-menu {
+    display: none;
+  }
+  .dropdown input:checked + .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn.primary {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+.btn.primary:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+.btn.secondary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+.btn.secondary:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+.btn.tertiary {
+  background-color: var(--card-color);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+.btn.tertiary:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+/* Hero section */
+.hero {
+  /* Use a custom pixel‑art hero background that matches the clan theme */
+  background: linear-gradient(180deg, rgba(85,107,47,0.8) 0%, rgba(139,69,19,0.8) 100%), url('assets/hero.png') center/cover no-repeat;
+  color: var(--text-color);
+  text-align: center;
+  padding: 4rem 0 5rem;
+  position: relative;
+}
+.hero-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  text-shadow: 3px 3px 0 var(--secondary-color);
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+.hero-requirement {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted-color);
+}
+
+/* Section titles */
+.section-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* Stats */
+.stats-section {
+  background-color: var(--card-color);
+  padding: 2.5rem 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+.stat-card {
+  background-color: var(--bg-color);
+  padding: 1.2rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--primary-color);
+}
+.stat-card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+.stat-card h3 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  color: var(--accent-color);
+  font-family: 'Press Start 2P', monospace;
+}
+.stat-card p {
+  font-size: 0.8rem;
+  color: var(--muted-color);
+}
+
+/* Two columns sections */
+.two-columns {
+  background-color: var(--bg-color);
+  padding: 2.5rem 0;
+}
+.two-columns .column {
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .two-columns .container {
+    display: flex;
+    gap: 2rem;
+  }
+  .two-columns .column {
+    flex: 1;
+  }
+}
+/* Table lists */
+.table-list {
+  list-style: none;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background-color: var(--card-color);
+  border-bottom: 1px solid var(--primary-color);
+  font-size: 0.8rem;
+}
+.table-row:nth-child(even) {
+  background-color: var(--bg-color);
+}
+.table-row:last-child {
+  border-bottom: none;
+}
+.table-row .player {
+  flex: 1;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.table-row .item,
+.table-row .achievement {
+  flex: 2;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.table-row .timestamp {
+  flex: 1;
+  text-align: right;
+  color: var(--muted-color);
+}
+
+/* Top earners */
+.top-earners {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.earner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--card-color);
+  padding: 0.8rem;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--secondary-color);
+}
+.earner i {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+.earner .name {
+  flex: 1;
+  font-weight: bold;
+}
+.earner .points {
+  color: var(--muted-color);
+}
+
+/* Event cards */
+.event-card {
+  background-color: var(--card-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  border: 2px solid var(--primary-color);
+}
+.event-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+.event-meta {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--muted-color);
+}
+.event-description {
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+
+/* Rank checker */
+.rank-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background-color: var(--card-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--secondary-color);
+}
+.rank-form label {
+  font-size: 0.8rem;
+  color: var(--muted-color);
+}
+.rank-form input {
+  padding: 0.6rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 0.8rem;
+}
+.rank-form input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.rank-result {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+/* Newsletter preview */
+.newsletter-preview {
+  display: flex;
+  background-color: var(--card-color);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  align-items: center;
+}
+.newsletter-image {
+  flex: 0 0 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  font-size: 2rem;
+}
+.newsletter-content {
+  padding: 1rem;
+}
+.newsletter-content h3 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+.newsletter-content p {
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--card-color);
+  padding: 2rem 0;
+  border-top: 3px solid var(--primary-color);
+  font-size: 0.8rem;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer-section h4 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent-color);
+}
+.footer-section ul {
+  list-style: none;
+  line-height: 1.8;
+}
+.footer-section a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-section a:hover {
+  color: var(--accent-color);
+}
+.social-links {
+  display: flex;
+  gap: 0.6rem;
+}
+.social-links i {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  transition: color 0.2s;
+}
+.social-links i:hover {
+  color: var(--secondary-color);
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+  border-top: 1px solid var(--primary-color);
+  padding-top: 1rem;
+  color: var(--muted-color);
+}
+
+/* Responsive footer layout */
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-section {
+    flex: 1;
+  }
+}
