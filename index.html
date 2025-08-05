@@ -54,22 +54,22 @@
   <div class="container">
     <h2 class="section-title">Clan Stats</h2>
     <div class="stats-grid">
-      <div class="stat-card">
+      <div class="stat-card" data-stat="total-members">
         <i class="fas fa-users"></i>
         <h3 id="total-members">–</h3>
         <p>Total Members</p>
       </div>
-      <div class="stat-card">
+      <div class="stat-card" data-stat="avg-level">
         <i class="fas fa-chart-line"></i>
         <h3 id="avg-level">–</h3>
         <p>Avg. Total Level</p>
       </div>
-      <div class="stat-card">
+      <div class="stat-card" data-stat="maxed-percent">
         <i class="fas fa-star"></i>
         <h3 id="maxed-percent">–</h3>
         <p>Maxed Members</p>
       </div>
-      <div class="stat-card">
+      <div class="stat-card" data-stat="infernal-cape">
         <i class="fas fa-fire"></i>
         <h3 id="infernal-cape">–</h3>
         <p>Members with Infernal Cape</p>
@@ -80,11 +80,11 @@
 
 <section class="two-columns">
   <div class="container">
-    <div class="column">
+    <div class="column" data-section="recent-logs">
       <h2 class="section-title">Recent Collection Logs</h2>
       <ul id="recent-logs" class="table-list"></ul>
     </div>
-    <div class="column">
+    <div class="column" data-section="recent-achievements">
       <h2 class="section-title">Recent Achievements</h2>
       <ul id="recent-achievements" class="table-list"></ul>
     </div>
@@ -93,11 +93,11 @@
 
 <section class="two-columns">
   <div class="container">
-    <div class="column">
+    <div class="column" data-section="top-earners">
       <h2 class="section-title">Monthly Top Earners</h2>
       <div id="top-earners" class="top-earners"></div>
     </div>
-    <div class="column">
+    <div class="column" data-section="upcoming-events">
       <h2 class="section-title">Upcoming Events</h2>
       <div id="upcoming-events"></div>
     </div>
@@ -106,7 +106,7 @@
 
 <section class="two-columns">
   <div class="container">
-    <div class="column">
+    <div class="column" data-section="rank-checker">
       <h2 class="section-title">Rank Checker</h2>
       <form id="rank-form" class="rank-form">
         <label for="rsn">Enter your RSN:</label>
@@ -115,7 +115,7 @@
       </form>
       <p id="rank-result" class="rank-result"></p>
     </div>
-    <div class="column">
+    <div class="column" data-section="newsletter-preview">
       <h2 class="section-title">Latest Newsletter</h2>
       <div id="newsletter-preview" class="newsletter-preview"></div>
     </div>
