@@ -25,14 +25,18 @@ body {
 
 /* Colour variables for easy theming */
 :root {
-  --bg-color: #0d0d0d;
-  --card-color: #1a1a1a;
-  --primary-color: #556b2f; /* burnt green */
-  --secondary-color: #8b4513; /* brown */
-  --accent-color: #9acd32; /* 1‑up lime */
-  --text-color: #f0e9c8; /* parchment */
+  
+  --secondary-color: #b86a39;
+    --bg-color: #142414;
+  --card-color: #1a2f1a;
+  --primary-color: #56b26f;
+--accent-color: #a3d977;
+  --text-color: #f9ecca;
   --muted-color: #888;
   --border-radius: 8px;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+
 }
 
 /* Container layout */
@@ -540,5 +544,15 @@ nav {
   }
   .footer-section {
     flex: 1;
+  
   }
+
+/* Modern card shadows */
+.stat-card,
+#top-earners .earner,
+.event-card,
+#newsletter-preview {
+  box-shadow: var(--shadow);
+}
+
 }
